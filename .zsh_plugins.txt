@@ -1,3 +1,5 @@
-zsh-users/zsh-autosuggestions
-zsh-users/zsh-syntax-highlighting
+robbyrussell/oh-my-zsh path:lib
+robbyrussell/oh-my-zsh path:themes/fino.zsh-theme
+#zsh-users/zsh-autosuggestions
+#zsh-users/zsh-syntax-highlighting
 zdharma/fast-syntax-highlighting
