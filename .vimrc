@@ -13,7 +13,11 @@ let g:gruvbox_italic=1
 set background=dark
 set mouse=a
 set number
-set tabstop=2
+set tabstop=8 
+set softtabstop=0 
+set expandtab 
+set shiftwidth=4 
+set smarttab
 set relativenumber
 set noswapfile
 set ruler
