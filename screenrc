@@ -1,0 +1,4 @@
+shell -${SHELL}
+caption always "%n(%t) : %C"
+defscrollback 100000
+escape ^Jj
