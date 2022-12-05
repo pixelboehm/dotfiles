@@ -15,5 +15,7 @@ export PATH="/Users/maxi/git/git-fuzzy/bin:$PATH"
 autoload -Uz compinit && compinit
 unsetopt multios
 
+# using gpg as ssh agent
+export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpg-connect-agent /bye
+gpgconf --launch gpg-agent
