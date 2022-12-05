@@ -1,4 +1,8 @@
-shell -${SHELL}
+# always show bottom bar
 caption always "%n(%t) : %C"
+
+# increase scrollback
 defscrollback 100000
+
+# remap escape key for nesting inside tmux
 escape ^Jj
