@@ -8,7 +8,7 @@ call plug#end()
 
 "Theming"
 let g:airline_theme = 'onedark'
-colorscheme gruvbox
+silent! colorscheme gruvbox
 let g:gruvbox_italic=1 
 set background=dark
 
