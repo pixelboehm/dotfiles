@@ -1,6 +1,6 @@
 #!/bin/bash
 
-YEAR=2022
+YEAR=2023
 COUNT=0
 
 cd ~/Downloads
