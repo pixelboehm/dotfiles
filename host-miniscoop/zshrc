@@ -4,11 +4,3 @@ compinit -C
 # load zsh plugins via antibody
 antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 source ~/.zsh_plugins.sh
-
-
-# using gpg as ssh agent
-export GPG_TTY="$(tty)"
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
-
-eval $(thefuck --alias)
