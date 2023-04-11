@@ -1,10 +1,6 @@
 # speed up zsh completions
 autoload -Uz compinit
-if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
-  compinit
-else
-  compinit -C
-fi
+compinit -C
 
 # alias section
 alias switchyubikey="gpg-connect-agent 'scd serialno' 'learn --force' /bye"
@@ -28,3 +24,6 @@ export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+# the fuck configuraiton
+eval $(thefuck --alias)
