@@ -3,4 +3,6 @@ robbyrussell/oh-my-zsh path:plugins/git
 robbyrussell/oh-my-zsh path:themes/fino.zsh-theme
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-history-substring-search
 zdharma/fast-syntax-highlighting
+djui/alias-tips
