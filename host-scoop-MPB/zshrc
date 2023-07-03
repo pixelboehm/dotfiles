@@ -5,6 +5,7 @@ compinit -C
 # alias section
 alias switchyubikey="gpg-connect-agent 'scd serialno' 'learn --force' /bye"
 alias codel="code $HOME/master-thesis/longevity.code-workspace"
+alias lg="lazygit"
 
 # load zsh plugins via antibody
 antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
