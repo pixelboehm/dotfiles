@@ -4,16 +4,14 @@ compinit -C
 
 # alias section
 alias switchyubikey="gpg-connect-agent 'scd serialno' 'learn --force' /bye"
-alias codel="code $HOME/master-thesis/longevity.code-workspace"
 alias lg="lazygit"
 
-# load zsh plugins via antibody
-antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
-source ~/.zsh_plugins.sh
+# load zsh plugins via antidote
+source $HOME/.antidote/antidote.zsh
+antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 
 # zsh plugin customization
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
-
 
 # pyenv setup
 export PYENV_ROOT="$HOME/.pyenv"
@@ -24,7 +22,9 @@ eval "$(pyenv init -)"
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
-export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+# export ruby path ## note: commented for now, I want to figure out where this is required
+# export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # the fuck configuraiton
 eval $(thefuck --alias)
