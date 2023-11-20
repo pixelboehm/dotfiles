@@ -10,6 +10,9 @@ alias lg="lazygit"
 source $HOME/.antidote/antidote.zsh
 antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 
+# load startship
+eval "$(starship init zsh)"
+
 # zsh plugin customization
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
 
@@ -17,6 +20,12 @@ export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# ruby setup
+RUBY_HOME=/opt/homebrew/opt/ruby/bin
+export PATH="$RUBY_HOME:$PATH"
+GEM_PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin"
+export PATH="$GEM_PATH:$PATH"
 
 # using gpg as ssh agent
 export GPG_TTY="$(tty)"
@@ -28,3 +37,5 @@ gpgconf --launch gpg-agent
 
 # the fuck configuraiton
 eval $(thefuck --alias)
+
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

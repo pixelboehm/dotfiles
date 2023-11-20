@@ -43,19 +43,18 @@ colors:
 
 font:
   normal:
+    family: 'Hack Nerd Font'
     style: Regular
-
   bold:
+    # family: Hack
     style: Bold
-
   italic:
+    # family: Hack
     style: Italic
-
   bold_italic:
-    # family: monospace
+    # family: Hack
     style: Bold Italic
-
-  size: 15
+  size: 14
 
 env:
   TERM: xterm-256color
