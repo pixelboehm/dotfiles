@@ -27,7 +27,6 @@ eval "$(pyenv init -)"
 RUBY_HOME=/opt/homebrew/opt/ruby/bin
 export PATH="$RUBY_HOME:$PATH"
 GEM_PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin"
-export PATH="$GEM_PATH:$PATH"
 
 # using gpg as ssh agent
 export GPG_TTY="$(tty)"
