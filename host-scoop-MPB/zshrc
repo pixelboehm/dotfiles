@@ -5,6 +5,8 @@ compinit -C
 # alias section
 alias switchyubikey="gpg-connect-agent 'scd serialno' 'learn --force' /bye"
 alias lg="lazygit"
+alias fl="bundle exec fastlane"
+alias fastlane="bundle exec fastlane"
 
 # load zsh plugins via antidote
 source $HOME/.antidote/antidote.zsh
