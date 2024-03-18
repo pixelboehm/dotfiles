@@ -4,3 +4,6 @@ compinit -C
 # load zsh plugins via antibody
 antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 source ~/.zsh_plugins.sh
+
+# load startship
+eval "$(starship init zsh)"
