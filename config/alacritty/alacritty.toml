@@ -1,0 +1,49 @@
+[colors.bright]
+black = "0x4a4a4a"
+blue = "0x82aaff"
+cyan = "0x89ddff"
+green = "0xc3e88d"
+magenta = "0xc792ea"
+red = "0xf07178"
+white = "0xffffff"
+yellow = "0xffcb6b"
+
+[colors.cursor]
+cursor = "0xeeffff"
+text = "0x212121"
+
+[colors.normal]
+black = "0x212121"
+blue = "0x82aaff"
+cyan = "0x89ddff"
+green = "0xc3e88d"
+magenta = "0xc792ea"
+red = "0xf07178"
+white = "0xeeffff"
+yellow = "0xffcb6b"
+
+[colors.primary]
+background = "0x212121"
+foreground = "0xeeffff"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 14
+
+[font.bold]
+style = "Bold"
+
+[font.bold_italic]
+style = "Bold Italic"
+
+[font.italic]
+style = "Italic"
+
+[font.normal]
+family = "Hack Nerd Font"
+style = "Regular"
+
+[window]
+opacity = 0.95
