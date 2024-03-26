@@ -19,6 +19,7 @@ set mouse=a "enable mouse"
 set relativenumber "enable relative line numbers"
 set noswapfile "load files without creating a swapfile"
 set ruler "show line and column number of cursor"
+set encoding=utf-8
 
 "Tab Section"
 set expandtab "use spaces instead of tabs"
