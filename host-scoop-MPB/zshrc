@@ -1,3 +1,6 @@
+# initializse rbenv / must be before compinit
+FPATH=~/.rbenv/completions:"$FPATH"
+
 # speed up zsh completions
 autoload -Uz compinit
 compinit -C
@@ -9,6 +12,7 @@ alias fl="bundle exec fastlane"
 alias fastlane="bundle exec fastlane"
 alias grad="./gradlew"
 alias gfk="./gradlew ktlintFormat && ./gradlew ktlintCheck"
+alias vim="nvim"
 
 # load zsh plugins via antidote
 source $HOME/.antidote/antidote.zsh
@@ -26,9 +30,10 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # ruby setup
-RUBY_HOME=/opt/homebrew/opt/ruby/bin
-export PATH="$RUBY_HOME:$PATH"
-GEM_PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin"
+eval "$(rbenv init - zsh)"
+# RUBY_HOME=/opt/homebrew/opt/ruby/bin
+# export PATH="$RUBY_HOME:$PATH"
+# GEM_PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin"
 
 # using gpg as ssh agent
 export GPG_TTY="$(tty)"
@@ -41,4 +46,11 @@ gpgconf --launch gpg-agent
 # the fuck configuraiton
 eval $(thefuck --alias)
 
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+fcd() {
+    local dir
+    dir=$(find "${1:-.}" -maxdepth 3 -type d | fzf +m) && cd "$dir"
+}
+
+alias fcm="fcd $HOME/mobile/"
