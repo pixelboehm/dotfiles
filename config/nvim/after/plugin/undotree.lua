@@ -1,1 +1,0 @@
-/Users/maximilianfischer/.dotfiles/config/nvim/after/plugin/undotree.lua
