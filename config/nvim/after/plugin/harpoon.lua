@@ -1,0 +1,1 @@
+/Users/maximilianfischer/.dotfiles/config/nvim/after/plugin/harpoon.lua

@@ -1,0 +1,1 @@
+/Users/maximilianfischer/.dotfiles/config/nvim/lua/maxi/remap.lua
