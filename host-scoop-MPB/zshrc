@@ -54,3 +54,4 @@ fcd() {
 }
 
 alias fcm="fcd $HOME/mobile/"
+alias fcn="fcd $HOME/maxi/"
