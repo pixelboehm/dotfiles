@@ -119,7 +119,7 @@ alt-2 = 'workspace 2_chat'
 alt-3 = 'workspace 3_code'
 alt-5 = 'workspace 5_web'
 alt-7 = 'workspace 7_misc'
-# alt-8 = 'workspace 8'
+alt-8 = 'workspace 8_spare'
 # alt-9 = 'workspace 9'
 # alt-b = 'workspace B'
 # alt-g = 'workspace G'
@@ -142,7 +142,7 @@ alt-shift-2 = 'move-node-to-workspace 2_chat'
 alt-shift-3 = 'move-node-to-workspace 3_code'
 alt-shift-5 = 'move-node-to-workspace 5_web'
 alt-shift-7 = 'move-node-to-workspace 7_misc'
-# alt-shift-8 = 'move-node-to-workspace 8'
+alt-shift-8 = 'move-node-to-workspace 8_spare'
 # alt-shift-9 = 'move-node-to-workspace 9'
 # alt-shift-b = 'move-node-to-workspace B'
 # alt-shift-g = 'move-node-to-workspace G'
@@ -183,16 +183,28 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
+[workspace-to-monitor-force-assignment]
+1_mail = 'primary'
+3_code = 'primary'
+7_misc = 'primary'
+8_spare = 'primary'
+2_chat = 'built-in'
+
+
 [[on-window-detected]]
 if.app-id = 'org.whispersystems.signal-desktop'
-run = "layout floating"
+run = ["layout floating", "move-node-to-workspace 7_misc"]
 
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
-run = "layout floating"
+run = ["layout floating", "move-node-to-workspace 7_misc"]
 
 [[on-window-detected]]
 if.app-id = 'com.apple.iphonesimulator'
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = 'ru.keepcoder.Telegram'
 run = "layout floating"
 
 [[on-window-detected]]
@@ -203,5 +215,33 @@ run = "layout floating"
 if.app-id = 'com.apple.finder'
 run = "layout floating"
 
+[[on-window-detected]]
+if.app-id = 'com.apple.reminders'
+run = "layout floating"
 
- 
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+run = ['move-node-to-workspace 5_web'] 
+
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = ['move-node-to-workspace 2_chat']
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+run = ['move-node-to-workspace 2_chat']
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Outlook'
+run = ['move-node-to-workspace 1_mail']
+
+
+[[on-window-detected]]
+if.app-id = 'com.apple.dt.Xcode'
+run = ['move-node-to-workspace 3_code']
+
+
