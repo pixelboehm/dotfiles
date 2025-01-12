@@ -224,6 +224,14 @@ if.app-id = 'com.apple.MobileSMS'
 run = "layout floating"
 
 [[on-window-detected]]
+if.app-id = 'com.apple.keychainaccess'
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = 'com.openai.chat'
+run = "layout floating"
+
+[[on-window-detected]]
 if.app-id = 'com.google.Chrome'
 run = ['move-node-to-workspace 5_web'] 
 
